@@ -1,5 +1,6 @@
 package com.sof.main;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Warrior extends Character {
@@ -12,6 +13,7 @@ public class Warrior extends Character {
 	private int money;
 	private String job;
 	static Scanner scan = new Scanner(System.in);
+	static Random random = new Random();
 	
 	public int getCriticalHit() {
 		return criticalHit;
@@ -90,9 +92,9 @@ public class Warrior extends Character {
 	 */
 	public void status()
 	{
-		System.out.println("┌─────────────────────┐");
-		System.out.println("│    캐릭터 현황         │");
-		System.out.println("└─────────────────────┘");
+		System.out.println("┌─────────────────────────┐");
+		System.out.println("│    캐릭터 상태 확인         │");
+		System.out.println("└─────────────────────────┘");
 		System.out.println("[[ " + super.getName() + " ]]");
 		System.out.println("┌─────────────────────────┐");
 		System.out.println("│직업		: "+ getJob());
@@ -113,6 +115,7 @@ public class Warrior extends Character {
 	 */
 	public int attack()
 	{
+		
 		return 0;
 	}
 	
@@ -130,15 +133,6 @@ public class Warrior extends Character {
 	public String spell()
 	{
 		return "spell";
-	}
-	
-	/*
-	 * 레벨업에 필요한 경험치를 체크하다.
-	 */
-	public int levelUpCheck()
-	{
-		
-		return 0;
 	}
 	
 	/*
